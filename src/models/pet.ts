@@ -133,22 +133,19 @@ const data: Pet[] = [
 ];
 
 export const Pet = {
+  /** Pegar todos os pets */
   getAll: () => {
     //return pets;
     return data;
   },
+  /** Filtrar os pets por tipo */
   getFromType: (type: PetType): Pet[] => {
     return data.filter((item) => item.type === type);
   },
+  /** Filtrar os pets por nome */
   getFromName: (name: string): Pet[] => {
     return data.filter(
       (item) => item.name.toLowerCase().indexOf(name.toLowerCase()) > -1
     );
   },
 };
-
-/** Pegar todos os pets */
-
-/** Filtrar os pets por tipo */
-
-/** Filtrar os pets por nome */
