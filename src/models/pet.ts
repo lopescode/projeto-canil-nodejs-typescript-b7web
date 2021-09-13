@@ -1,6 +1,7 @@
-import * as pets from "../db/pets.json";
+//import * as pets from "../db/pets.json";
 
-/*
+type PetType = "dog" | "cat" | "fish";
+type PetSex = "Masculino" | "Feminino";
 type Pet = {
   type: "dog" | "cat" | "fish";
   image: string;
@@ -130,12 +131,19 @@ const data: Pet[] = [
     sex: "Masculino",
   },
 ];
-*/
 
 export const Pet = {
   getAll: () => {
-    return pets;
-    //return data;
+    //return pets;
+    return data;
+  },
+  getFromType: (type: PetType): Pet[] => {
+    return data.filter((item) => item.type === type);
+  },
+  getFromName: (name: string): Pet[] => {
+    return data.filter(
+      (item) => item.name.toLowerCase().indexOf(name.toLowerCase()) > -1
+    );
   },
 };
 
