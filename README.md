@@ -5,7 +5,7 @@
 Projeto feito no módulo do curso NodeJS + Typescript da b7web - Bonieky Lacerda
 
 ### Pré-requisitos globais:
-`npm i -g nodemon typescript ts-node`
+`npm i -g nodemon ts-node`
 
 ### Instalação
 `npm install`
